@@ -1,0 +1,20 @@
+{
+  "bugs": "https://github.com/polkadot-js/apps/issues",
+  "homepage": "https://github.com/polkadot-js/apps/tree/master/packages/page-board-virginia#readme",
+  "license": "Apache-2.0",
+  "name": "@polkadot/app-board-virginia",
+  "private": true,
+  "repository": {
+    "directory": "packages/page-board-virginia",
+    "type": "git",
+    "url": "https://github.com/polkadot-js/apps.git"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "version": "0.109.2-20",
+  "dependencies": {
+    "@babel/runtime": "^7.17.8",
+    "@polkadot/react-components": "^0.109.2-20",
+    "@polkadot/react-query": "^0.109.2-20"
+  }
+}

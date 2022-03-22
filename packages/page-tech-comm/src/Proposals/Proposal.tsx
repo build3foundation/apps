@@ -21,7 +21,7 @@ interface Props {
   isMember: boolean;
   members: string[];
   prime?: AccountId | null;
-  type: 'membership' | 'technicalCommittee';
+  type: 'council' | 'membership' | 'technicalCommittee' | 'boardVirginia';
 }
 
 function Proposal ({ className = '', imageHash, isMember, members, prime, type }: Props): React.ReactElement<Props> | null {

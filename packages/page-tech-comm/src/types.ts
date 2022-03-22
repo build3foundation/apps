@@ -9,5 +9,5 @@ export interface ComponentProps {
   prime?: AccountId | null;
   proposalHashes?: Hash[];
   members: string[];
-  type: 'membership' | 'technicalCommittee';
+  type: 'council' | 'membership' | 'technicalCommittee' | 'boardVirginia';
 }

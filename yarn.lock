@@ -2698,6 +2698,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@polkadot/app-board-virginia@workspace:packages/page-board-virginia":
+  version: 0.0.0-use.local
+  resolution: "@polkadot/app-board-virginia@workspace:packages/page-board-virginia"
+  dependencies:
+    "@babel/runtime": ^7.17.8
+    "@polkadot/react-components": ^0.109.2-20
+    "@polkadot/react-query": ^0.109.2-20
+  languageName: unknown
+  linkType: soft
+
 "@polkadot/app-bounties@workspace:packages/page-bounties":
   version: 0.0.0-use.local
   resolution: "@polkadot/app-bounties@workspace:packages/page-bounties"

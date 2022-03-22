@@ -16,7 +16,7 @@ import { useTranslation } from './translate';
 interface Props {
   basePath: string;
   className?: string;
-  type: 'membership' | 'technicalCommittee';
+  type: 'council' | 'membership' | 'technicalCommittee' | 'boardVirginia';
 }
 
 const HIDDEN_EMPTY: string[] = [];

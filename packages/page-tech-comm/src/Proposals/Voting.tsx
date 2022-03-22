@@ -17,7 +17,7 @@ interface Props {
   members: string[];
   prime?: AccountId | null;
   proposalId: BN | number;
-  type: 'membership' | 'technicalCommittee';
+  type: 'council' | 'membership' | 'technicalCommittee' | 'boardVirginia';
 }
 
 function Voting ({ hash, isMember, members, prime, proposalId, type }: Props): React.ReactElement<Props> | null {

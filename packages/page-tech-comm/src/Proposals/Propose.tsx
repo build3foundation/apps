@@ -14,7 +14,7 @@ import { useTranslation } from '../translate';
 interface Props {
   isMember: boolean;
   members: string[];
-  type: 'membership' | 'technicalCommittee';
+  type: 'council' | 'membership' | 'technicalCommittee' | 'boardVirginia';
 }
 
 interface ProposalState {

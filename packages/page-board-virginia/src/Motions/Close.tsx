@@ -1,4 +1,4 @@
-// Copyright 2017-2022 @polkadot/app-tech-comm authors & contributors
+// Copyright 2017-2022 @polkadot/app-board-virginia authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
 import type { Hash, Proposal, ProposalIndex } from '@polkadot/types/interfaces';
@@ -15,17 +15,17 @@ interface Props {
   hash: Hash;
   idNumber: ProposalIndex;
   proposal: Proposal;
-  type: 'council' | 'membership' | 'technicalCommittee' | 'boardVirginia';
 }
 
-function Close ({ hasFailed, hash, idNumber, proposal, type }: Props): React.ReactElement<Props> | null {
+function Close ({ hasFailed, hash, idNumber, proposal }: Props): React.ReactElement<Props> | null {
   const { t } = useTranslation();
   const { api } = useApi();
   const [isOpen, toggleOpen] = useToggle();
   const [accountId, setAccountId] = useState<string | null>(null);
   const [proposalWeight, proposalLength] = useWeight(proposal);
-  const modLocation = useCollectiveInstance(type);
+  const modLocation = useCollectiveInstance('boardVirginia');
 
+  // protect against older versions
   if (!modLocation) {
     return null;
   }
@@ -39,13 +39,13 @@ function Close ({ hasFailed, hash, idNumber, proposal, type }: Props): React.Rea
           size='large'
         >
           <Modal.Content>
-            <Modal.Columns hint={t<string>('The proposal that will be affected. Once closed for the current voting round, it would need to be re-submitted for a subsequent voting round.')}>
+            <Modal.Columns hint={t<string>('The proposal that will be affected. Once closed for the current voting round, it would need to be re-submitted to the board for a subsequent voting round.')}>
               <ProposedAction
                 idNumber={idNumber}
                 proposal={proposal}
               />
             </Modal.Columns>
-            <Modal.Columns hint={t<string>('The committee account that will apply the close for the current round.')}>
+            <Modal.Columns hint={t<string>('The board account that will apply the close for the current round.')}>
               <InputAddress
                 help={t<string>('Select the account you wish close the proposal with.')}
                 label={t<string>('close from account')}
