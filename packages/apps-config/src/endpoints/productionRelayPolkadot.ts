@@ -1,7 +1,7 @@
 // Copyright 2017-2022 @polkadot/apps-config authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { TFunction } from 'i18next';
+import type { TFunction } from '../types';
 import type { EndpointOption } from './types';
 
 import { POLKADOT_GENESIS } from '../api/constants';
@@ -95,7 +95,8 @@ export function createPolkadot (t: TFunction): EndpointOption {
         paraId: 2031,
         text: t('rpc.polkadot.centrifuge', 'Centrifuge', { ns: 'apps-config' }),
         providers: {
-          Centrifuge: 'wss://fullnode.parachain.centrifuge.io'
+          Centrifuge: 'wss://fullnode.parachain.centrifuge.io',
+          OnFinality: 'wss://centrifuge-parachain.api.onfinality.io/public-ws'
         }
       },
       {
@@ -161,12 +162,11 @@ export function createPolkadot (t: TFunction): EndpointOption {
       },
       {
         info: 'equilibrium',
-        isUnreachable: true, // https://github.com/polkadot-js/apps/pull/6761
         homepage: 'https://equilibrium.io/',
         paraId: 2011,
         text: t('rpc.polkadot.equilibrium', 'Equilibrium', { ns: 'apps-config' }),
         providers: {
-          Equilibrium: 'wss://node.equilibrium.io'
+          Equilibrium: 'wss://node.pol.equilibrium.io/'
         }
       },
       {
@@ -196,6 +196,15 @@ export function createPolkadot (t: TFunction): EndpointOption {
         providers: {
           'Kintsugi Labs': 'wss://api.interlay.io/parachain',
           OnFinality: 'wss://interlay.api.onfinality.io/public-ws'
+        }
+      },
+      {
+        info: 'kapex',
+        homepage: 'https://totemaccounting.com/',
+        paraId: 2007,
+        text: t('rpc.polkadot.kapex', 'Kapex', { ns: 'apps-config' }),
+        providers: {
+          Totem: 'wss://k-ui.kapex.network'
         }
       },
       {
@@ -237,7 +246,8 @@ export function createPolkadot (t: TFunction): EndpointOption {
         paraId: 2026,
         text: t('rpc.polkadot.nodle', 'Nodle', { ns: 'apps-config' }),
         providers: {
-          OnFinality: 'wss://nodle-parachain.api.onfinality.io/public-ws'
+          OnFinality: 'wss://nodle-parachain.api.onfinality.io/public-ws',
+          Dwellir: 'wss://eden-rpc.dwellir.com'
         }
       },
       {
@@ -253,7 +263,6 @@ export function createPolkadot (t: TFunction): EndpointOption {
       {
         info: 'phala',
         homepage: 'https://phala.network',
-        isUnreachable: true,
         paraId: 2035,
         text: t('rpc.polkadot.phala', 'Phala Network', { ns: 'apps-config' }),
         providers: {
@@ -263,10 +272,11 @@ export function createPolkadot (t: TFunction): EndpointOption {
       {
         info: 'polkadex',
         homepage: 'https://polkadex.trade/',
-        paraId: 2036,
+        paraId: 2040,
         text: t('rpc.polkadot.polkadex', 'Polkadex', { ns: 'apps-config' }),
         providers: {
-          'Polkadex Team': 'wss://mainnet.polkadex.trade/'
+          'Polkadex Team': 'wss://mainnet.polkadex.trade/',
+          OnFinality: 'wss://polkadex.api.onfinality.io/public-ws'
         }
       },
       {
